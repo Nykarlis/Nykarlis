@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Travel Budget Estimator</title>
+<meta name="description" content="Rough per-country travel budgets by travel style, trip length and number of travellers.">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>&#127758;</text></svg>">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <h1>Travel Budget Estimator</h1>
+    <p class="tagline">Roughly what a trip costs, broken down by category.</p>
+  </div>
+</header>
+
+<main class="wrap" id="main">
+
+  <!-- Shown only if the JSON cannot be loaded (the file:// problem) -->
+  <div class="loaderr" id="load-error" hidden>
+    <h2>Could not load the cost data</h2>
+    <p>Your browser blocked <code>data/countries.json</code>. This happens when the page is opened
+      directly from disk (a <code>file://</code> address) — Chrome and Edge refuse to read local
+      files that way for security reasons.</p>
+    <p>Start a tiny local web server instead. In a terminal, from the
+      <code>travel-budget-app</code> folder:</p>
+    <pre><code>python3 -m http.server</code></pre>
+    <p>Then open <a href="http://localhost:8000">http://localhost:8000</a>. Nothing is installed and
+      nothing leaves your machine.</p>
+    <p class="loaderr-detail" id="load-error-detail"></p>
+  </div>
+
+  <form class="controls" id="controls" hidden>
+
+    <section class="panel">
+      <h2 class="panel-title">Where are you going?</h2>
+
+      <div class="field">
+        <label for="country-search">Search countries</label>
+        <input type="search" id="country-search" placeholder="Type a country, e.g. Peru" autocomplete="off" spellcheck="false">
+      </div>
+
+      <div class="field">
+        <label for="country">Destination</label>
+        <select id="country" size="1"></select>
+        <p class="hint" id="country-hint"></p>
+      </div>
+
+      <div class="field">
+        <label for="departure">Flying from</label>
+        <select id="departure"></select>
+        <p class="hint">Flight prices swing wildly by origin airport, so this is a broad region, not a real fare.</p>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2 class="panel-title">How do you travel?</h2>
+      <div class="tiers" id="tiers" role="radiogroup" aria-label="Travel style"></div>
+    </section>
+
+    <section class="panel">
+      <h2 class="panel-title">How long, and how many?</h2>
+
+      <div class="row">
+        <div class="field">
+          <label for="nights">Nights</label>
+          <div class="stepper">
+            <button type="button" class="step" data-step="-1" data-target="nights" aria-label="One night fewer">&minus;</button>
+            <input type="number" id="nights" min="1" max="365" step="1" value="7" inputmode="numeric">
+            <button type="button" class="step" data-step="1" data-target="nights" aria-label="One night more">+</button>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="travellers">Travellers</label>
+          <div class="stepper">
+            <button type="button" class="step" data-step="-1" data-target="travellers" aria-label="One traveller fewer">&minus;</button>
+            <input type="number" id="travellers" min="1" max="20" step="1" value="1" inputmode="numeric">
+            <button type="button" class="step" data-step="1" data-target="travellers" aria-label="One traveller more">+</button>
+          </div>
+        </div>
+      </div>
+
+      <label class="check" id="share-wrap">
+        <input type="checkbox" id="share-rooms" checked>
+        <span>
+          <strong>Sharing rooms</strong>
+          <em id="share-note">Two people per room, priced at about 1.4&times; a single — roughly 30% off each.</em>
+        </span>
+      </label>
+    </section>
+
+    <section class="panel panel-compare">
+      <div class="field">
+        <label for="compare">Compare with a second country <span class="opt">optional</span></label>
+        <select id="compare"></select>
+      </div>
+    </section>
+
+  </form>
+
+  <div class="results" id="results" hidden></div>
+
+  <section class="panel disclaimer" id="disclaimer" hidden>
+    <h2 class="panel-title">About these numbers</h2>
+    <p><strong>Figures are ballpark estimates, last reviewed <span id="last-reviewed"></span>.</strong>
+      They come from general knowledge of typical published cost-of-travel ranges — not from a live
+      pricing feed, and not from anyone's actual receipts.</p>
+    <p>Exchange rates are approximate and fixed in the data file, <strong>as of <span id="rates-as-of"></span></strong>.
+      They are not looked up live and will drift. Local-currency amounts are a rough conversion, nothing more.</p>
+    <p>Sanity-check anything here against real listings before you book. Prices for a single city, a
+      single week, or a festival period can be far away from a national average.</p>
+    <p class="offline-note">This page runs entirely in your browser. No data is sent anywhere and nothing is saved.</p>
+  </section>
+
+</main>
+
+<footer class="wrap foot">
+  <p>Static site · vanilla HTML, CSS and JavaScript · all figures editable in <code>data/countries.json</code></p>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>

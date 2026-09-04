@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Where should we go next? — Travel Destination Poll</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <h1>✈️ Which destination excites you most?</h1>
+    <p>Cast one vote per destination. Results update live for everyone.</p>
+  </header>
+
+  <main>
+    <section id="poll" class="grid" aria-live="polite"></section>
+
+    <section class="results">
+      <h2>Live results <span id="total-votes"></span></h2>
+      <div id="results-list"></div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" hidden></div>
+
+  <footer>
+    <p>Built with Node/Express + vanilla JS. Vote as many times as you like — once per destination.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

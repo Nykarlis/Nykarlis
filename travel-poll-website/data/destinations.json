@@ -1,12 +1,72 @@
 [
-  { "id": "japan", "name": "Japan", "emoji": "🗾", "blurb": "Neon cities, ancient temples, and cherry blossoms.", "votes": 0 },
-  { "id": "italy", "name": "Italy — Amalfi Coast", "emoji": "🍋", "blurb": "Cliffside villages, pasta, and turquoise water.", "votes": 0 },
-  { "id": "new-zealand", "name": "New Zealand", "emoji": "🥝", "blurb": "Fjords, glaciers, and Middle-earth landscapes.", "votes": 0 },
-  { "id": "iceland", "name": "Iceland", "emoji": "🌋", "blurb": "Northern lights, glaciers, and geothermal spas.", "votes": 0 },
-  { "id": "bali", "name": "Bali", "emoji": "🌴", "blurb": "Rice terraces, temples, and surf beaches.", "votes": 0 },
-  { "id": "peru", "name": "Peru — Machu Picchu", "emoji": "🏔️", "blurb": "Andes peaks and lost Incan cities.", "votes": 0 },
-  { "id": "morocco", "name": "Morocco", "emoji": "🕌", "blurb": "Desert dunes, souks, and blue-washed towns.", "votes": 0 },
-  { "id": "thailand", "name": "Thailand", "emoji": "🏝️", "blurb": "Island hopping, street food, and jungle temples.", "votes": 0 },
-  { "id": "norway", "name": "Norway — Fjords", "emoji": "⛰️", "blurb": "Dramatic fjords and the midnight sun.", "votes": 0 },
-  { "id": "costa-rica", "name": "Costa Rica", "emoji": "🌺", "blurb": "Rainforests, volcanoes, and pura vida.", "votes": 0 }
+  {
+    "id": "japan",
+    "name": "Japan",
+    "emoji": "🗾",
+    "blurb": "Neon cities, ancient temples, and cherry blossoms.",
+    "votes": 0
+  },
+  {
+    "id": "italy",
+    "name": "Italy — Amalfi Coast",
+    "emoji": "🍋",
+    "blurb": "Cliffside villages, pasta, and turquoise water.",
+    "votes": 0
+  },
+  {
+    "id": "new-zealand",
+    "name": "New Zealand",
+    "emoji": "🥝",
+    "blurb": "Fjords, glaciers, and Middle-earth landscapes.",
+    "votes": 0
+  },
+  {
+    "id": "iceland",
+    "name": "Iceland",
+    "emoji": "🌋",
+    "blurb": "Northern lights, glaciers, and geothermal spas.",
+    "votes": 0
+  },
+  {
+    "id": "bali",
+    "name": "Bali",
+    "emoji": "🌴",
+    "blurb": "Rice terraces, temples, and surf beaches.",
+    "votes": 0
+  },
+  {
+    "id": "peru",
+    "name": "Peru — Machu Picchu",
+    "emoji": "🏔️",
+    "blurb": "Andes peaks and lost Incan cities.",
+    "votes": 0
+  },
+  {
+    "id": "morocco",
+    "name": "Morocco",
+    "emoji": "🕌",
+    "blurb": "Desert dunes, souks, and blue-washed towns.",
+    "votes": 0
+  },
+  {
+    "id": "thailand",
+    "name": "Thailand",
+    "emoji": "🏝️",
+    "blurb": "Island hopping, street food, and jungle temples.",
+    "votes": 0
+  },
+  {
+    "id": "norway",
+    "name": "Norway — Fjords",
+    "emoji": "⛰️",
+    "blurb": "Dramatic fjords and the midnight sun.",
+    "votes": 0
+  },
+  {
+    "id": "costa-rica",
+    "name": "Costa Rica",
+    "emoji": "🌺",
+    "blurb": "Rainforests, volcanoes, and pura vida.",
+    "votes": 0
+  }
 ]

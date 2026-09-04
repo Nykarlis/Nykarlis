@@ -1,0 +1,1180 @@
+{
+  "meta": {
+    "last_reviewed": "2026-09-04",
+    "rates_as_of": "2026-09-04",
+    "base_currency": "USD",
+    "source": "General knowledge of typical published cost-of-travel ranges. Not a live pricing or FX API.",
+    "how_to_edit": "Every daily figure is US dollars, per person, per day. Flight figures are US dollars for one round-trip ticket per person from that departure region. Change a number, save the file, reload the page.",
+    "rounding": "Daily figures rounded to the nearest 5 USD (or nearest 1 USD for the very cheapest lines). Flights rounded to the nearest 50 USD.",
+    "sharing_rule": "When travellers share rooms the app prices a double room at 1.4x the listed per-person rate, i.e. about 30% off each. Dorm beds (Backpacker tier) are already per-person, so sharing does not change them."
+  },
+
+  "tiers": [
+    { "id": "backpacker", "label": "Backpacker", "description": "Hostel dorms, street food and self-catering, public buses, mostly free activities." },
+    { "id": "budget", "label": "Budget", "description": "Private hostel rooms or cheap guesthouses, local restaurants, the occasional taxi, some paid attractions." },
+    { "id": "midrange", "label": "Mid-range", "description": "3-star hotels or good Airbnbs, a mix of restaurants, comfortable transport, regular paid activities." },
+    { "id": "luxury", "label": "Luxury", "description": "4/5-star hotels, fine dining, private transfers and domestic flights, premium tours." }
+  ],
+
+  "categories": [
+    { "id": "accommodation", "label": "Accommodation" },
+    { "id": "food_and_drink", "label": "Food and drink" },
+    { "id": "local_transport", "label": "Local transport" },
+    { "id": "activities", "label": "Activities and entry fees" },
+    { "id": "miscellaneous", "label": "Miscellaneous" }
+  ],
+
+  "departure_regions": [
+    { "id": "europe", "label": "Europe" },
+    { "id": "north_america", "label": "North America" },
+    { "id": "asia_pacific", "label": "Asia-Pacific" }
+  ],
+
+  "countries": [
+    {
+      "name": "Morocco",
+      "continent": "Africa",
+      "iso": "MA",
+      "currency": "MAD",
+      "currency_name": "Moroccan dirham",
+      "usd_to_local": 9.6,
+      "daily_costs": {
+        "backpacker": { "accommodation": 12, "food_and_drink": 10, "local_transport": 5, "activities": 5, "miscellaneous": 5 },
+        "budget":     { "accommodation": 30, "food_and_drink": 18, "local_transport": 8, "activities": 10, "miscellaneous": 7 },
+        "midrange":   { "accommodation": 70, "food_and_drink": 35, "local_transport": 15, "activities": 20, "miscellaneous": 10 },
+        "luxury":     { "accommodation": 200, "food_and_drink": 80, "local_transport": 45, "activities": 55, "miscellaneous": 20 }
+      },
+      "flights_usd": { "europe": 250, "north_america": 750, "asia_pacific": 950 },
+      "notes": [
+        "Best weather April-May and September-October; high summer is punishing inland.",
+        "Cash still rules in the medinas, and small tips (5-10 dirham) are expected almost everywhere."
+      ]
+    },
+    {
+      "name": "Egypt",
+      "continent": "Africa",
+      "iso": "EG",
+      "currency": "EGP",
+      "currency_name": "Egyptian pound",
+      "usd_to_local": 49,
+      "daily_costs": {
+        "backpacker": { "accommodation": 10, "food_and_drink": 10, "local_transport": 5, "activities": 10, "miscellaneous": 5 },
+        "budget":     { "accommodation": 25, "food_and_drink": 18, "local_transport": 8, "activities": 20, "miscellaneous": 7 },
+        "midrange":   { "accommodation": 60, "food_and_drink": 35, "local_transport": 15, "activities": 40, "miscellaneous": 10 },
+        "luxury":     { "accommodation": 180, "food_and_drink": 75, "local_transport": 40, "activities": 85, "miscellaneous": 20 }
+      },
+      "flights_usd": { "europe": 300, "north_america": 850, "asia_pacific": 900 },
+      "notes": [
+        "October-April is the season; summer in Luxor and Aswan regularly passes 40C.",
+        "Baksheesh tipping is constant - carry a wad of small pound notes. The pound has devalued sharply, so local-currency figures move fast."
+      ]
+    },
+    {
+      "name": "South Africa",
+      "continent": "Africa",
+      "iso": "ZA",
+      "currency": "ZAR",
+      "currency_name": "South African rand",
+      "usd_to_local": 18,
+      "daily_costs": {
+        "backpacker": { "accommodation": 15, "food_and_drink": 12, "local_transport": 8, "activities": 8, "miscellaneous": 5 },
+        "budget":     { "accommodation": 35, "food_and_drink": 22, "local_transport": 15, "activities": 15, "miscellaneous": 8 },
+        "midrange":   { "accommodation": 80, "food_and_drink": 45, "local_transport": 30, "activities": 30, "miscellaneous": 15 },
+        "luxury":     { "accommodation": 250, "food_and_drink": 100, "local_transport": 70, "activities": 90, "miscellaneous": 25 }
+      },
+      "flights_usd": { "europe": 750, "north_america": 1100, "asia_pacific": 1000 },
+      "notes": [
+        "December-January is the domestic holiday peak on the coast; the Cape is best November-March.",
+        "Cards work almost everywhere and a 10% restaurant tip is standard. Private game lodges sit well above even the Luxury figures here."
+      ]
+    },
+    {
+      "name": "Tunisia",
+      "continent": "Africa",
+      "iso": "TN",
+      "currency": "TND",
+      "currency_name": "Tunisian dinar",
+      "usd_to_local": 3.1,
+      "daily_costs": {
+        "backpacker": { "accommodation": 12, "food_and_drink": 10, "local_transport": 5, "activities": 5, "miscellaneous": 5 },
+        "budget":     { "accommodation": 28, "food_and_drink": 16, "local_transport": 8, "activities": 10, "miscellaneous": 6 },
+        "midrange":   { "accommodation": 60, "food_and_drink": 30, "local_transport": 15, "activities": 20, "miscellaneous": 10 },
+        "luxury":     { "accommodation": 160, "food_and_drink": 65, "local_transport": 35, "activities": 45, "miscellaneous": 15 }
+      },
+      "flights_usd": { "europe": 200, "north_america": 800, "asia_pacific": 1000 },
+      "notes": [
+        "June-August is beach peak; spring and autumn are far more comfortable for the Sahara and the ruins.",
+        "The dinar is a closed currency - you cannot buy it before you arrive or take it home. Cash for souks, cards in resorts."
+      ]
+    },
+    {
+      "name": "Algeria",
+      "continent": "Africa",
+      "iso": "DZ",
+      "currency": "DZD",
+      "currency_name": "Algerian dinar",
+      "usd_to_local": 134,
+      "daily_costs": {
+        "backpacker": { "accommodation": 15, "food_and_drink": 10, "local_transport": 5, "activities": 5, "miscellaneous": 5 },
+        "budget":     { "accommodation": 35, "food_and_drink": 18, "local_transport": 10, "activities": 10, "miscellaneous": 7 },
+        "midrange":   { "accommodation": 75, "food_and_drink": 35, "local_transport": 20, "activities": 20, "miscellaneous": 10 },
+        "luxury":     { "accommodation": 180, "food_and_drink": 70, "local_transport": 45, "activities": 50, "miscellaneous": 15 }
+      },
+      "flights_usd": { "europe": 300, "north_america": 900, "asia_pacific": 1100 },
+      "notes": [
+        "Most nationalities need a visa arranged in advance, often with a local invitation or tour booking.",
+        "A cash economy with unreliable foreign-card ATMs, and a parallel exchange rate that differs a lot from the official one - treat the dinar figures as rough."
+      ]
+    },
+    {
+      "name": "Kenya",
+      "continent": "Africa",
+      "iso": "KE",
+      "currency": "KES",
+      "currency_name": "Kenyan shilling",
+      "usd_to_local": 129,
+      "daily_costs": {
+        "backpacker": { "accommodation": 15, "food_and_drink": 12, "local_transport": 8, "activities": 10, "miscellaneous": 5 },
+        "budget":     { "accommodation": 40, "food_and_drink": 22, "local_transport": 15, "activities": 35, "miscellaneous": 8 },
+        "midrange":   { "accommodation": 100, "food_and_drink": 45, "local_transport": 35, "activities": 90, "miscellaneous": 15 },
+        "luxury":     { "accommodation": 400, "food_and_drink": 110, "local_transport": 120, "activities": 250, "miscellaneous": 25 }
+      },
+      "flights_usd": { "europe": 700, "north_america": 1100, "asia_pacific": 900 },
+      "notes": [
+        "July-October is the Mara migration peak and prices reflect it; the long rains are March-May.",
+        "M-Pesa mobile money is used for everything. National park fees are priced in US dollars and are the single biggest activity cost."
+      ]
+    },
+    {
+      "name": "Tanzania",
+      "continent": "Africa",
+      "iso": "TZ",
+      "currency": "TZS",
+      "currency_name": "Tanzanian shilling",
+      "usd_to_local": 2600,
+      "daily_costs": {
+        "backpacker": { "accommodation": 15, "food_and_drink": 12, "local_transport": 8, "activities": 10, "miscellaneous": 5 },
+        "budget":     { "accommodation": 40, "food_and_drink": 22, "local_transport": 15, "activities": 40, "miscellaneous": 8 },
+        "midrange":   { "accommodation": 100, "food_and_drink": 45, "local_transport": 35, "activities": 110, "miscellaneous": 15 },
+        "luxury":     { "accommodation": 450, "food_and_drink": 110, "local_transport": 130, "activities": 300, "miscellaneous": 25 }
+      },
+      "flights_usd": { "europe": 750, "north_america": 1200, "asia_pacific": 950 },
+      "notes": [
+        "June-October dry season is peak for the Serengeti and Kilimanjaro.",
+        "Serengeti and Ngorongoro entry fees are steep and quoted in US dollars. Zanzibar is much cheaper than a mainland safari."
+      ]
+    },
+    {
+      "name": "Zimbabwe",
+      "continent": "Africa",
+      "iso": "ZW",
+      "currency": "USD",
+      "currency_name": "US dollar (used in practice alongside the ZiG)",
+      "usd_to_local": 1,
+      "daily_costs": {
+        "backpacker": { "accommodation": 15, "food_and_drink": 12, "local_transport": 8, "activities": 15, "miscellaneous": 5 },
+        "budget":     { "accommodation": 40, "food_and_drink": 25, "local_transport": 15, "activities": 30, "miscellaneous": 8 },
+        "midrange":   { "accommodation": 95, "food_and_drink": 50, "local_transport": 35, "activities": 70, "miscellaneous": 15 },
+        "luxury":     { "accommodation": 300, "food_and_drink": 100, "local_transport": 100, "activities": 180, "miscellaneous": 25 }
+      },
+      "flights_usd": { "europe": 900, "north_america": 1300, "asia_pacific": 1100 },
+      "notes": [
+        "Victoria Falls is at its fullest February-May; wildlife viewing is best August-October.",
+        "US dollars are used for nearly everything - bring clean, small bills, as change is a genuine problem and card acceptance is patchy."
+      ]
+    },
+    {
+      "name": "Uganda",
+      "continent": "Africa",
+      "iso": "UG",
+      "currency": "UGX",
+      "currency_name": "Ugandan shilling",
+      "usd_to_local": 3700,
+      "daily_costs": {
+        "backpacker": { "accommodation": 12, "food_and_drink": 10, "local_transport": 8, "activities": 10, "miscellaneous": 5 },
+        "budget":     { "accommodation": 30, "food_and_drink": 20, "local_transport": 15, "activities": 30, "miscellaneous": 8 },
+        "midrange":   { "accommodation": 75, "food_and_drink": 40, "local_transport": 30, "activities": 80, "miscellaneous": 12 },
+        "luxury":     { "accommodation": 280, "food_and_drink": 90, "local_transport": 90, "activities": 220, "miscellaneous": 20 }
+      },
+      "flights_usd": { "europe": 800, "north_america": 1200, "asia_pacific": 1000 },
+      "notes": [
+        "Drier windows are June-August and December-February, though Uganda is green year-round.",
+        "A gorilla trekking permit is a fixed one-off of roughly USD 800 per person on top of these daily figures - add it separately if you plan to go."
+      ]
+    },
+    {
+      "name": "Namibia",
+      "continent": "Africa",
+      "iso": "NA",
+      "currency": "NAD",
+      "currency_name": "Namibian dollar (pegged 1:1 to the South African rand)",
+      "usd_to_local": 18,
+      "daily_costs": {
+        "backpacker": { "accommodation": 18, "food_and_drink": 14, "local_transport": 15, "activities": 8, "miscellaneous": 5 },
+        "budget":     { "accommodation": 40, "food_and_drink": 25, "local_transport": 35, "activities": 15, "miscellaneous": 8 },
+        "midrange":   { "accommodation": 90, "food_and_drink": 45, "local_transport": 60, "activities": 30, "miscellaneous": 15 },
+        "luxury":     { "accommodation": 280, "food_and_drink": 95, "local_transport": 120, "activities": 90, "miscellaneous": 25 }
+      },
+      "flights_usd": { "europe": 900, "north_america": 1400, "asia_pacific": 1200 },
+      "notes": [
+        "A self-drive country - a 4x4 or high-clearance rental plus fuel is usually the largest line in the budget, which is why transport is high here.",
+        "May-October is the dry season and best for wildlife. South African rand is accepted at par."
+      ]
+    },
+
+    {
+      "name": "China",
+      "continent": "Asia",
+      "iso": "CN",
+      "currency": "CNY",
+      "currency_name": "Chinese yuan",
+      "usd_to_local": 7.1,
+      "daily_costs": {
+        "backpacker": { "accommodation": 12, "food_and_drink": 12, "local_transport": 6, "activities": 10, "miscellaneous": 5 },
+        "budget":     { "accommodation": 30, "food_and_drink": 22, "local_transport": 12, "activities": 20, "miscellaneous": 8 },
+        "midrange":   { "accommodation": 75, "food_and_drink": 45, "local_transport": 25, "activities": 40, "miscellaneous": 12 },
+        "luxury":     { "accommodation": 220, "food_and_drink": 110, "local_transport": 70, "activities": 110, "miscellaneous": 25 }
+      },
+      "flights_usd": { "europe": 700, "north_america": 900, "asia_pacific": 350 },
+      "notes": [
+        "Avoid Golden Week (first week of October) and Chinese New Year - domestic travel is close to impossible.",
+        "Cash is nearly obsolete. Link a foreign card to Alipay or WeChat Pay before you fly or you will struggle to pay for anything."
+      ]
+    },
+    {
+      "name": "Thailand",
+      "continent": "Asia",
+      "iso": "TH",
+      "currency": "THB",
+      "currency_name": "Thai baht",
+      "usd_to_local": 33,
+      "daily_costs": {
+        "backpacker": { "accommodation": 10, "food_and_drink": 10, "local_transport": 5, "activities": 8, "miscellaneous": 5 },
+        "budget":     { "accommodation": 28, "food_and_drink": 18, "local_transport": 10, "activities": 18, "miscellaneous": 7 },
+        "midrange":   { "accommodation": 70, "food_and_drink": 38, "local_transport": 20, "activities": 35, "miscellaneous": 10 },
+        "luxury":     { "accommodation": 220, "food_and_drink": 90, "local_transport": 55, "activities": 100, "miscellaneous": 20 }
+      },
+      "flights_usd": { "europe": 700, "north_america": 950, "asia_pacific": 300 },
+      "notes": [
+        "November-February is the cool dry peak; the islands have opposite monsoons on each coast.",
+        "Tipping is not expected but rounding up is normal. Cards are fine in cities, cash on the islands and at markets."
+      ]
+    },
+    {
+      "name": "Japan",
+      "continent": "Asia",
+      "iso": "JP",
+      "currency": "JPY",
+      "currency_name": "Japanese yen",
+      "usd_to_local": 150,
+      "daily_costs": {
+        "backpacker": { "accommodation": 30, "food_and_drink": 20, "local_transport": 12, "activities": 10, "miscellaneous": 8 },
+        "budget":     { "accommodation": 60, "food_and_drink": 35, "local_transport": 20, "activities": 20, "miscellaneous": 10 },
+        "midrange":   { "accommodation": 130, "food_and_drink": 70, "local_transport": 35, "activities": 40, "miscellaneous": 15 },
+        "luxury":     { "accommodation": 380, "food_and_drink": 170, "local_transport": 100, "activities": 110, "miscellaneous": 30 }
+      },
+      "flights_usd": { "europe": 800, "north_america": 900, "asia_pacific": 400 },
+      "notes": [
+        "Cherry blossom (late March to mid-April) and autumn colour (November) are peak - book accommodation months ahead.",
+        "No tipping anywhere, ever. Get an IC card (Suica/ICOCA) for transport, and keep some cash for smaller restaurants."
+      ]
+    },
+    {
+      "name": "Malaysia",
+      "continent": "Asia",
+      "iso": "MY",
+      "currency": "MYR",
+      "currency_name": "Malaysian ringgit",
+      "usd_to_local": 4.4,
+      "daily_costs": {
+        "backpacker": { "accommodation": 10, "food_and_drink": 9, "local_transport": 5, "activities": 6, "miscellaneous": 5 },
+        "budget":     { "accommodation": 25, "food_and_drink": 16, "local_transport": 10, "activities": 15, "miscellaneous": 6 },
+        "midrange":   { "accommodation": 60, "food_and_drink": 32, "local_transport": 18, "activities": 30, "miscellaneous": 10 },
+        "luxury":     { "accommodation": 180, "food_and_drink": 75, "local_transport": 45, "activities": 80, "miscellaneous": 15 }
+      },
+      "flights_usd": { "europe": 700, "north_america": 1000, "asia_pacific": 300 },
+      "notes": [
+        "The east coast islands (Perhentians, Tioman) largely close November-February for the monsoon.",
+        "Cards are widely accepted, tipping is not a thing, and hawker food keeps the food line very low."
+      ]
+    },
+    {
+      "name": "Vietnam",
+      "continent": "Asia",
+      "iso": "VN",
+      "currency": "VND",
+      "currency_name": "Vietnamese dong",
+      "usd_to_local": 25500,
+      "daily_costs": {
+        "backpacker": { "accommodation": 8, "food_and_drink": 8, "local_transport": 5, "activities": 6, "miscellaneous": 4 },
+        "budget":     { "accommodation": 22, "food_and_drink": 15, "local_transport": 10, "activities": 14, "miscellaneous": 6 },
+        "midrange":   { "accommodation": 55, "food_and_drink": 30, "local_transport": 18, "activities": 28, "miscellaneous": 8 },
+        "luxury":     { "accommodation": 170, "food_and_drink": 70, "local_transport": 45, "activities": 75, "miscellaneous": 15 }
+      },
+      "flights_usd": { "europe": 700, "north_america": 1000, "asia_pacific": 300 },
+      "notes": [
+        "The country is 1,600 km long and the north and south have opposite seasons - there is no single best month for the whole trip.",
+        "Cash still rules at street level. Tipping is not expected outside tourist restaurants."
+      ]
+    },
+    {
+      "name": "India",
+      "continent": "Asia",
+      "iso": "IN",
+      "currency": "INR",
+      "currency_name": "Indian rupee",
+      "usd_to_local": 86,
+      "daily_costs": {
+        "backpacker": { "accommodation": 8, "food_and_drink": 7, "local_transport": 5, "activities": 6, "miscellaneous": 4 },
+        "budget":     { "accommodation": 20, "food_and_drink": 14, "local_transport": 8, "activities": 14, "miscellaneous": 5 },
+        "midrange":   { "accommodation": 55, "food_and_drink": 28, "local_transport": 18, "activities": 28, "miscellaneous": 8 },
+        "luxury":     { "accommodation": 180, "food_and_drink": 70, "local_transport": 50, "activities": 80, "miscellaneous": 15 }
+      },
+      "flights_usd": { "europe": 600, "north_america": 1000, "asia_pacific": 400 },
+      "notes": [
+        "October-March is the comfortable window across most of the country; April-June is extreme heat and July-September is monsoon.",
+        "UPI and cards work well in cities; keep cash for trains, rickshaws and markets. Around 10% is a normal restaurant tip."
+      ]
+    },
+    {
+      "name": "Indonesia",
+      "continent": "Asia",
+      "iso": "ID",
+      "currency": "IDR",
+      "currency_name": "Indonesian rupiah",
+      "usd_to_local": 16300,
+      "daily_costs": {
+        "backpacker": { "accommodation": 10, "food_and_drink": 9, "local_transport": 6, "activities": 8, "miscellaneous": 5 },
+        "budget":     { "accommodation": 25, "food_and_drink": 16, "local_transport": 12, "activities": 18, "miscellaneous": 6 },
+        "midrange":   { "accommodation": 65, "food_and_drink": 33, "local_transport": 22, "activities": 35, "miscellaneous": 10 },
+        "luxury":     { "accommodation": 200, "food_and_drink": 80, "local_transport": 55, "activities": 90, "miscellaneous": 15 }
+      },
+      "flights_usd": { "europe": 800, "north_america": 1100, "asia_pacific": 350 },
+      "notes": [
+        "Bali peaks in July-August and over Christmas; the wet season is roughly November-March.",
+        "Cash for warungs and scooter hire. ATM fees are per-withdrawal, so take out larger amounts less often."
+      ]
+    },
+    {
+      "name": "South Korea",
+      "continent": "Asia",
+      "iso": "KR",
+      "currency": "KRW",
+      "currency_name": "South Korean won",
+      "usd_to_local": 1380,
+      "daily_costs": {
+        "backpacker": { "accommodation": 25, "food_and_drink": 18, "local_transport": 10, "activities": 10, "miscellaneous": 7 },
+        "budget":     { "accommodation": 50, "food_and_drink": 30, "local_transport": 15, "activities": 20, "miscellaneous": 10 },
+        "midrange":   { "accommodation": 110, "food_and_drink": 60, "local_transport": 28, "activities": 40, "miscellaneous": 12 },
+        "luxury":     { "accommodation": 300, "food_and_drink": 140, "local_transport": 80, "activities": 100, "miscellaneous": 25 }
+      },
+      "flights_usd": { "europe": 800, "north_america": 900, "asia_pacific": 350 },
+      "notes": [
+        "Spring (April) and autumn (October) are the best and the busiest; summer is hot, humid and wet.",
+        "No tipping. A T-money card covers buses, subways and many taxis, and cards are accepted virtually everywhere."
+      ]
+    },
+    {
+      "name": "Saudi Arabia",
+      "continent": "Asia",
+      "iso": "SA",
+      "currency": "SAR",
+      "currency_name": "Saudi riyal (pegged to the US dollar)",
+      "usd_to_local": 3.75,
+      "daily_costs": {
+        "backpacker": { "accommodation": 30, "food_and_drink": 18, "local_transport": 12, "activities": 15, "miscellaneous": 8 },
+        "budget":     { "accommodation": 60, "food_and_drink": 32, "local_transport": 22, "activities": 30, "miscellaneous": 10 },
+        "midrange":   { "accommodation": 130, "food_and_drink": 60, "local_transport": 45, "activities": 60, "miscellaneous": 15 },
+        "luxury":     { "accommodation": 350, "food_and_drink": 140, "local_transport": 120, "activities": 150, "miscellaneous": 25 }
+      },
+      "flights_usd": { "europe": 500, "north_america": 1000, "asia_pacific": 600 },
+      "notes": [
+        "November-March only - summer temperatures make sightseeing genuinely unsafe.",
+        "Alcohol is illegal, so budget nothing for it. Cards are near-universal, and modest dress is required."
+      ]
+    },
+    {
+      "name": "United Arab Emirates",
+      "continent": "Asia",
+      "iso": "AE",
+      "currency": "AED",
+      "currency_name": "UAE dirham (pegged to the US dollar)",
+      "usd_to_local": 3.67,
+      "daily_costs": {
+        "backpacker": { "accommodation": 35, "food_and_drink": 20, "local_transport": 12, "activities": 20, "miscellaneous": 8 },
+        "budget":     { "accommodation": 70, "food_and_drink": 35, "local_transport": 20, "activities": 40, "miscellaneous": 12 },
+        "midrange":   { "accommodation": 150, "food_and_drink": 70, "local_transport": 40, "activities": 75, "miscellaneous": 18 },
+        "luxury":     { "accommodation": 450, "food_and_drink": 170, "local_transport": 110, "activities": 180, "miscellaneous": 30 }
+      },
+      "flights_usd": { "europe": 450, "north_america": 900, "asia_pacific": 500 },
+      "notes": [
+        "November-March is the season; July-August is 45C and everything happens indoors.",
+        "Alcohol is heavily taxed and hotel-only - a beer can be USD 12-15, which is enough to distort a food budget."
+      ]
+    },
+
+    {
+      "name": "France",
+      "continent": "Europe",
+      "iso": "FR",
+      "currency": "EUR",
+      "currency_name": "Euro",
+      "usd_to_local": 0.92,
+      "daily_costs": {
+        "backpacker": { "accommodation": 35, "food_and_drink": 22, "local_transport": 10, "activities": 12, "miscellaneous": 8 },
+        "budget":     { "accommodation": 70, "food_and_drink": 40, "local_transport": 15, "activities": 22, "miscellaneous": 10 },
+        "midrange":   { "accommodation": 150, "food_and_drink": 80, "local_transport": 25, "activities": 40, "miscellaneous": 15 },
+        "luxury":     { "accommodation": 420, "food_and_drink": 190, "local_transport": 80, "activities": 110, "miscellaneous": 30 }
+      },
+      "flights_usd": { "europe": 125, "north_america": 600, "asia_pacific": 900 },
+      "notes": [
+        "July-August is peak everywhere, and a lot of Paris genuinely shuts for August.",
+        "Service is included in restaurant bills - leaving small change is plenty. Cards are accepted almost universally."
+      ]
+    },
+    {
+      "name": "Spain",
+      "continent": "Europe",
+      "iso": "ES",
+      "currency": "EUR",
+      "currency_name": "Euro",
+      "usd_to_local": 0.92,
+      "daily_costs": {
+        "backpacker": { "accommodation": 30, "food_and_drink": 20, "local_transport": 8, "activities": 10, "miscellaneous": 7 },
+        "budget":     { "accommodation": 60, "food_and_drink": 35, "local_transport": 14, "activities": 20, "miscellaneous": 9 },
+        "midrange":   { "accommodation": 130, "food_and_drink": 70, "local_transport": 25, "activities": 38, "miscellaneous": 14 },
+        "luxury":     { "accommodation": 360, "food_and_drink": 160, "local_transport": 70, "activities": 100, "miscellaneous": 25 }
+      },
+      "flights_usd": { "europe": 100, "north_america": 600, "asia_pacific": 950 },
+      "notes": [
+        "July-August is coastal peak and inland heat; May-June and September are much better value.",
+        "Dinner starts around 21:00, and tipping is minimal - rounding up the bill is normal."
+      ]
+    },
+    {
+      "name": "Italy",
+      "continent": "Europe",
+      "iso": "IT",
+      "currency": "EUR",
+      "currency_name": "Euro",
+      "usd_to_local": 0.92,
+      "daily_costs": {
+        "backpacker": { "accommodation": 35, "food_and_drink": 22, "local_transport": 9, "activities": 14, "miscellaneous": 8 },
+        "budget":     { "accommodation": 70, "food_and_drink": 40, "local_transport": 15, "activities": 25, "miscellaneous": 10 },
+        "midrange":   { "accommodation": 145, "food_and_drink": 75, "local_transport": 25, "activities": 45, "miscellaneous": 15 },
+        "luxury":     { "accommodation": 400, "food_and_drink": 175, "local_transport": 75, "activities": 110, "miscellaneous": 25 }
+      },
+      "flights_usd": { "europe": 125, "north_america": 650, "asia_pacific": 950 },
+      "notes": [
+        "June-August is hot and crowded - major museums and the Vatican need booking well ahead.",
+        "A coperto (cover charge) on restaurant bills is normal; tipping beyond that is not expected."
+      ]
+    },
+    {
+      "name": "Turkey",
+      "continent": "Europe",
+      "iso": "TR",
+      "currency": "TRY",
+      "currency_name": "Turkish lira",
+      "usd_to_local": 42,
+      "daily_costs": {
+        "backpacker": { "accommodation": 15, "food_and_drink": 12, "local_transport": 6, "activities": 10, "miscellaneous": 5 },
+        "budget":     { "accommodation": 35, "food_and_drink": 22, "local_transport": 10, "activities": 20, "miscellaneous": 8 },
+        "midrange":   { "accommodation": 85, "food_and_drink": 45, "local_transport": 20, "activities": 40, "miscellaneous": 12 },
+        "luxury":     { "accommodation": 250, "food_and_drink": 100, "local_transport": 55, "activities": 100, "miscellaneous": 20 }
+      },
+      "flights_usd": { "europe": 200, "north_america": 750, "asia_pacific": 800 },
+      "notes": [
+        "April-June and September-October are the sweet spots; the coast is packed in July-August.",
+        "High inflation means lira prices move fast - treat the local-currency figures here as rougher than for most countries."
+      ]
+    },
+    {
+      "name": "Germany",
+      "continent": "Europe",
+      "iso": "DE",
+      "currency": "EUR",
+      "currency_name": "Euro",
+      "usd_to_local": 0.92,
+      "daily_costs": {
+        "backpacker": { "accommodation": 35, "food_and_drink": 22, "local_transport": 10, "activities": 10, "miscellaneous": 8 },
+        "budget":     { "accommodation": 70, "food_and_drink": 40, "local_transport": 15, "activities": 20, "miscellaneous": 10 },
+        "midrange":   { "accommodation": 140, "food_and_drink": 70, "local_transport": 25, "activities": 35, "miscellaneous": 14 },
+        "luxury":     { "accommodation": 350, "food_and_drink": 160, "local_transport": 70, "activities": 95, "miscellaneous": 25 }
+      },
+      "flights_usd": { "europe": 100, "north_america": 600, "asia_pacific": 900 },
+      "notes": [
+        "Oktoberfest (late September) and the December Christmas markets spike hotel prices in Munich, Berlin and Nuremberg.",
+        "Cash is still expected in many bakeries, bars and small restaurants - do not assume your card will work."
+      ]
+    },
+    {
+      "name": "United Kingdom",
+      "continent": "Europe",
+      "iso": "GB",
+      "currency": "GBP",
+      "currency_name": "Pound sterling",
+      "usd_to_local": 0.78,
+      "daily_costs": {
+        "backpacker": { "accommodation": 40, "food_and_drink": 25, "local_transport": 12, "activities": 14, "miscellaneous": 8 },
+        "budget":     { "accommodation": 80, "food_and_drink": 45, "local_transport": 20, "activities": 25, "miscellaneous": 10 },
+        "midrange":   { "accommodation": 165, "food_and_drink": 85, "local_transport": 30, "activities": 45, "miscellaneous": 15 },
+        "luxury":     { "accommodation": 450, "food_and_drink": 190, "local_transport": 90, "activities": 120, "miscellaneous": 30 }
+      },
+      "flights_usd": { "europe": 100, "north_america": 550, "asia_pacific": 900 },
+      "notes": [
+        "London runs roughly a third dearer than the rest of the country - basing yourself elsewhere changes the total a lot.",
+        "Contactless cards work on all London transport. Tip about 10% for table service only; never in pubs."
+      ]
+    },
+    {
+      "name": "Greece",
+      "continent": "Europe",
+      "iso": "GR",
+      "currency": "EUR",
+      "currency_name": "Euro",
+      "usd_to_local": 0.92,
+      "daily_costs": {
+        "backpacker": { "accommodation": 30, "food_and_drink": 20, "local_transport": 8, "activities": 12, "miscellaneous": 7 },
+        "budget":     { "accommodation": 60, "food_and_drink": 35, "local_transport": 14, "activities": 22, "miscellaneous": 9 },
+        "midrange":   { "accommodation": 130, "food_and_drink": 65, "local_transport": 25, "activities": 40, "miscellaneous": 14 },
+        "luxury":     { "accommodation": 380, "food_and_drink": 150, "local_transport": 75, "activities": 100, "miscellaneous": 25 }
+      },
+      "flights_usd": { "europe": 150, "north_america": 700, "asia_pacific": 950 },
+      "notes": [
+        "July-August island prices can double and ferries sell out; May-June and September are far better value.",
+        "Carry cash on smaller islands - card acceptance thins out quickly away from the main towns."
+      ]
+    },
+    {
+      "name": "Austria",
+      "continent": "Europe",
+      "iso": "AT",
+      "currency": "EUR",
+      "currency_name": "Euro",
+      "usd_to_local": 0.92,
+      "daily_costs": {
+        "backpacker": { "accommodation": 35, "food_and_drink": 22, "local_transport": 10, "activities": 12, "miscellaneous": 8 },
+        "budget":     { "accommodation": 70, "food_and_drink": 40, "local_transport": 15, "activities": 22, "miscellaneous": 10 },
+        "midrange":   { "accommodation": 150, "food_and_drink": 75, "local_transport": 25, "activities": 40, "miscellaneous": 15 },
+        "luxury":     { "accommodation": 400, "food_and_drink": 170, "local_transport": 75, "activities": 110, "miscellaneous": 25 }
+      },
+      "flights_usd": { "europe": 125, "north_america": 650, "asia_pacific": 950 },
+      "notes": [
+        "Two separate peaks: summer sightseeing, and the December-March ski season when Alpine prices jump sharply.",
+        "Round bills up by 5-10%. Cash is still common in rural guesthouses."
+      ]
+    },
+    {
+      "name": "Portugal",
+      "continent": "Europe",
+      "iso": "PT",
+      "currency": "EUR",
+      "currency_name": "Euro",
+      "usd_to_local": 0.92,
+      "daily_costs": {
+        "backpacker": { "accommodation": 28, "food_and_drink": 18, "local_transport": 8, "activities": 10, "miscellaneous": 7 },
+        "budget":     { "accommodation": 55, "food_and_drink": 32, "local_transport": 13, "activities": 18, "miscellaneous": 9 },
+        "midrange":   { "accommodation": 120, "food_and_drink": 60, "local_transport": 22, "activities": 35, "miscellaneous": 12 },
+        "luxury":     { "accommodation": 330, "food_and_drink": 140, "local_transport": 65, "activities": 90, "miscellaneous": 22 }
+      },
+      "flights_usd": { "europe": 125, "north_america": 550, "asia_pacific": 1000 },
+      "notes": [
+        "Lisbon, Porto and the Algarve are busiest June-September; spring and autumn are mild and much cheaper.",
+        "Tipping is light. Cards are accepted but small cafes often have a card minimum, so keep coins."
+      ]
+    },
+    {
+      "name": "Netherlands",
+      "continent": "Europe",
+      "iso": "NL",
+      "currency": "EUR",
+      "currency_name": "Euro",
+      "usd_to_local": 0.92,
+      "daily_costs": {
+        "backpacker": { "accommodation": 40, "food_and_drink": 24, "local_transport": 10, "activities": 14, "miscellaneous": 8 },
+        "budget":     { "accommodation": 80, "food_and_drink": 42, "local_transport": 16, "activities": 24, "miscellaneous": 10 },
+        "midrange":   { "accommodation": 160, "food_and_drink": 80, "local_transport": 28, "activities": 45, "miscellaneous": 15 },
+        "luxury":     { "accommodation": 400, "food_and_drink": 175, "local_transport": 80, "activities": 110, "miscellaneous": 28 }
+      },
+      "flights_usd": { "europe": 100, "north_america": 550, "asia_pacific": 900 },
+      "notes": [
+        "Amsterdam hotel prices dominate the budget - Haarlem, Utrecht or Rotterdam cut accommodation sharply and are 20-40 minutes by train.",
+        "Many places are card-only, and some still refuse foreign credit cards - a debit card with Maestro is the safe bet."
+      ]
+    },
+
+    {
+      "name": "United States",
+      "continent": "North America",
+      "iso": "US",
+      "currency": "USD",
+      "currency_name": "US dollar",
+      "usd_to_local": 1,
+      "daily_costs": {
+        "backpacker": { "accommodation": 45, "food_and_drink": 25, "local_transport": 12, "activities": 15, "miscellaneous": 8 },
+        "budget":     { "accommodation": 90, "food_and_drink": 45, "local_transport": 25, "activities": 28, "miscellaneous": 12 },
+        "midrange":   { "accommodation": 180, "food_and_drink": 85, "local_transport": 45, "activities": 50, "miscellaneous": 18 },
+        "luxury":     { "accommodation": 450, "food_and_drink": 200, "local_transport": 120, "activities": 130, "miscellaneous": 30 }
+      },
+      "flights_usd": { "europe": 600, "north_america": 250, "asia_pacific": 900 },
+      "notes": [
+        "Tipping 18-20% on table service is not optional, and sales tax is added at the till - budget roughly 25% above menu and shelf prices.",
+        "Outside a handful of big cities a rental car is effectively mandatory, which is why the transport line is high."
+      ]
+    },
+    {
+      "name": "Mexico",
+      "continent": "North America",
+      "iso": "MX",
+      "currency": "MXN",
+      "currency_name": "Mexican peso",
+      "usd_to_local": 19,
+      "daily_costs": {
+        "backpacker": { "accommodation": 15, "food_and_drink": 12, "local_transport": 6, "activities": 10, "miscellaneous": 5 },
+        "budget":     { "accommodation": 35, "food_and_drink": 25, "local_transport": 12, "activities": 22, "miscellaneous": 8 },
+        "midrange":   { "accommodation": 90, "food_and_drink": 50, "local_transport": 25, "activities": 45, "miscellaneous": 12 },
+        "luxury":     { "accommodation": 280, "food_and_drink": 120, "local_transport": 70, "activities": 110, "miscellaneous": 20 }
+      },
+      "flights_usd": { "europe": 700, "north_america": 350, "asia_pacific": 1100 },
+      "notes": [
+        "The Riviera Maya peaks December-April; the interior (Oaxaca, Mexico City) is pleasant most of the year.",
+        "Cash for markets and colectivos. Tipping 10-15% in restaurants is standard, and pay in pesos rather than dollars."
+      ]
+    },
+    {
+      "name": "Canada",
+      "continent": "North America",
+      "iso": "CA",
+      "currency": "CAD",
+      "currency_name": "Canadian dollar",
+      "usd_to_local": 1.37,
+      "daily_costs": {
+        "backpacker": { "accommodation": 45, "food_and_drink": 25, "local_transport": 12, "activities": 15, "miscellaneous": 8 },
+        "budget":     { "accommodation": 85, "food_and_drink": 45, "local_transport": 22, "activities": 28, "miscellaneous": 12 },
+        "midrange":   { "accommodation": 170, "food_and_drink": 80, "local_transport": 45, "activities": 50, "miscellaneous": 16 },
+        "luxury":     { "accommodation": 420, "food_and_drink": 180, "local_transport": 110, "activities": 130, "miscellaneous": 28 }
+      },
+      "flights_usd": { "europe": 550, "north_america": 300, "asia_pacific": 900 },
+      "notes": [
+        "June-August is peak, and Banff/Jasper in July is the most expensive week of the Canadian year.",
+        "Tipping 15-20% plus taxes added at the till, exactly like the US. Distances are big - factor in a car or internal flights."
+      ]
+    },
+    {
+      "name": "Dominican Republic",
+      "continent": "North America",
+      "iso": "DO",
+      "currency": "DOP",
+      "currency_name": "Dominican peso",
+      "usd_to_local": 62,
+      "daily_costs": {
+        "backpacker": { "accommodation": 20, "food_and_drink": 15, "local_transport": 8, "activities": 12, "miscellaneous": 6 },
+        "budget":     { "accommodation": 45, "food_and_drink": 28, "local_transport": 15, "activities": 25, "miscellaneous": 8 },
+        "midrange":   { "accommodation": 110, "food_and_drink": 55, "local_transport": 30, "activities": 50, "miscellaneous": 12 },
+        "luxury":     { "accommodation": 320, "food_and_drink": 130, "local_transport": 75, "activities": 110, "miscellaneous": 20 }
+      },
+      "flights_usd": { "europe": 700, "north_america": 400, "asia_pacific": 1400 },
+      "notes": [
+        "December-April is the dry peak; August-October carries real hurricane risk.",
+        "These figures assume independent travel. An all-inclusive package changes the maths completely and is often cheaper for a beach week."
+      ]
+    },
+    {
+      "name": "Cuba",
+      "continent": "North America",
+      "iso": "CU",
+      "currency": "CUP",
+      "currency_name": "Cuban peso",
+      "usd_to_local": 120,
+      "daily_costs": {
+        "backpacker": { "accommodation": 20, "food_and_drink": 15, "local_transport": 8, "activities": 10, "miscellaneous": 6 },
+        "budget":     { "accommodation": 40, "food_and_drink": 25, "local_transport": 15, "activities": 20, "miscellaneous": 8 },
+        "midrange":   { "accommodation": 85, "food_and_drink": 45, "local_transport": 30, "activities": 40, "miscellaneous": 12 },
+        "luxury":     { "accommodation": 250, "food_and_drink": 100, "local_transport": 70, "activities": 90, "miscellaneous": 20 }
+      },
+      "flights_usd": { "europe": 650, "north_america": 500, "asia_pacific": 1500 },
+      "notes": [
+        "Bring every dollar you need as cash (euros or US dollars) - most foreign cards do not work, and US-issued cards do not work at all.",
+        "The informal exchange rate is wildly different from the official one, so the Cuban peso figures here are the roughest in this dataset. Casas particulares are the standard accommodation."
+      ]
+    },
+    {
+      "name": "Costa Rica",
+      "continent": "North America",
+      "iso": "CR",
+      "currency": "CRC",
+      "currency_name": "Costa Rican colon",
+      "usd_to_local": 510,
+      "daily_costs": {
+        "backpacker": { "accommodation": 25, "food_and_drink": 18, "local_transport": 12, "activities": 18, "miscellaneous": 6 },
+        "budget":     { "accommodation": 55, "food_and_drink": 32, "local_transport": 22, "activities": 35, "miscellaneous": 10 },
+        "midrange":   { "accommodation": 120, "food_and_drink": 60, "local_transport": 45, "activities": 65, "miscellaneous": 14 },
+        "luxury":     { "accommodation": 330, "food_and_drink": 135, "local_transport": 100, "activities": 150, "miscellaneous": 25 }
+      },
+      "flights_usd": { "europe": 750, "north_america": 450, "asia_pacific": 1400 },
+      "notes": [
+        "December-April is dry season and peak pricing; the green season is cheaper and still perfectly workable.",
+        "US dollars are accepted almost everywhere, and 10% service plus 13% tax is usually already on restaurant bills."
+      ]
+    },
+    {
+      "name": "Jamaica",
+      "continent": "North America",
+      "iso": "JM",
+      "currency": "JMD",
+      "currency_name": "Jamaican dollar",
+      "usd_to_local": 157,
+      "daily_costs": {
+        "backpacker": { "accommodation": 25, "food_and_drink": 18, "local_transport": 10, "activities": 15, "miscellaneous": 6 },
+        "budget":     { "accommodation": 55, "food_and_drink": 32, "local_transport": 18, "activities": 28, "miscellaneous": 9 },
+        "midrange":   { "accommodation": 130, "food_and_drink": 65, "local_transport": 40, "activities": 55, "miscellaneous": 14 },
+        "luxury":     { "accommodation": 350, "food_and_drink": 140, "local_transport": 90, "activities": 120, "miscellaneous": 22 }
+      },
+      "flights_usd": { "europe": 750, "north_america": 400, "asia_pacific": 1500 },
+      "notes": [
+        "December-April is peak; September-October is hurricane season and much quieter.",
+        "US dollars are widely accepted but you get poor value - pay in Jamaican dollars. Route taxis are a fraction of the cost of resort transfers."
+      ]
+    },
+    {
+      "name": "Panama",
+      "continent": "North America",
+      "iso": "PA",
+      "currency": "USD",
+      "currency_name": "US dollar (the balboa is pegged 1:1 and only exists as coins)",
+      "usd_to_local": 1,
+      "daily_costs": {
+        "backpacker": { "accommodation": 20, "food_and_drink": 15, "local_transport": 8, "activities": 12, "miscellaneous": 6 },
+        "budget":     { "accommodation": 45, "food_and_drink": 28, "local_transport": 15, "activities": 25, "miscellaneous": 8 },
+        "midrange":   { "accommodation": 105, "food_and_drink": 55, "local_transport": 32, "activities": 50, "miscellaneous": 12 },
+        "luxury":     { "accommodation": 300, "food_and_drink": 120, "local_transport": 80, "activities": 110, "miscellaneous": 20 }
+      },
+      "flights_usd": { "europe": 750, "north_america": 400, "asia_pacific": 1400 },
+      "notes": [
+        "The US dollar is the working currency, so there is no conversion to think about.",
+        "December-April is dry season. Trips to San Blas and Bocas del Toro are cash-only and add a few hundred dollars quickly."
+      ]
+    },
+    {
+      "name": "Guatemala",
+      "continent": "North America",
+      "iso": "GT",
+      "currency": "GTQ",
+      "currency_name": "Guatemalan quetzal",
+      "usd_to_local": 7.7,
+      "daily_costs": {
+        "backpacker": { "accommodation": 12, "food_and_drink": 10, "local_transport": 6, "activities": 10, "miscellaneous": 5 },
+        "budget":     { "accommodation": 30, "food_and_drink": 20, "local_transport": 12, "activities": 20, "miscellaneous": 7 },
+        "midrange":   { "accommodation": 75, "food_and_drink": 40, "local_transport": 25, "activities": 40, "miscellaneous": 10 },
+        "luxury":     { "accommodation": 220, "food_and_drink": 95, "local_transport": 65, "activities": 90, "miscellaneous": 18 }
+      },
+      "flights_usd": { "europe": 800, "north_america": 500, "asia_pacific": 1500 },
+      "notes": [
+        "November-April is dry season; Semana Santa in Antigua is the single busiest and priciest week of the year.",
+        "Carry quetzal cash for shuttles and markets - ATMs are scarce outside Antigua, Xela and the capital."
+      ]
+    },
+    {
+      "name": "Bahamas",
+      "continent": "North America",
+      "iso": "BS",
+      "currency": "BSD",
+      "currency_name": "Bahamian dollar (pegged 1:1 to the US dollar)",
+      "usd_to_local": 1,
+      "daily_costs": {
+        "backpacker": { "accommodation": 55, "food_and_drink": 30, "local_transport": 15, "activities": 20, "miscellaneous": 10 },
+        "budget":     { "accommodation": 110, "food_and_drink": 55, "local_transport": 28, "activities": 40, "miscellaneous": 14 },
+        "midrange":   { "accommodation": 250, "food_and_drink": 110, "local_transport": 60, "activities": 80, "miscellaneous": 20 },
+        "luxury":     { "accommodation": 650, "food_and_drink": 230, "local_transport": 150, "activities": 180, "miscellaneous": 35 }
+      },
+      "flights_usd": { "europe": 800, "north_america": 400, "asia_pacific": 1600 },
+      "notes": [
+        "One of the most expensive destinations in the Americas - nearly all food and fuel is imported. There is essentially no backpacker infrastructure.",
+        "US and Bahamian dollars circulate interchangeably at 1:1. December-April is peak; ferries between the Out Islands need planning."
+      ]
+    },
+
+    {
+      "name": "Argentina",
+      "continent": "South America",
+      "iso": "AR",
+      "currency": "ARS",
+      "currency_name": "Argentine peso",
+      "usd_to_local": 1450,
+      "daily_costs": {
+        "backpacker": { "accommodation": 15, "food_and_drink": 12, "local_transport": 6, "activities": 10, "miscellaneous": 5 },
+        "budget":     { "accommodation": 35, "food_and_drink": 25, "local_transport": 12, "activities": 20, "miscellaneous": 8 },
+        "midrange":   { "accommodation": 85, "food_and_drink": 50, "local_transport": 25, "activities": 40, "miscellaneous": 12 },
+        "luxury":     { "accommodation": 250, "food_and_drink": 110, "local_transport": 65, "activities": 95, "miscellaneous": 20 }
+      },
+      "flights_usd": { "europe": 900, "north_america": 800, "asia_pacific": 1600 },
+      "notes": [
+        "Inflation is extreme and the peso figures here will drift within months - the US dollar amounts are the more reliable half.",
+        "Patagonia is only really open November-March, and Buenos Aires is pleasant in spring and autumn."
+      ]
+    },
+    {
+      "name": "Brazil",
+      "continent": "South America",
+      "iso": "BR",
+      "currency": "BRL",
+      "currency_name": "Brazilian real",
+      "usd_to_local": 5.5,
+      "daily_costs": {
+        "backpacker": { "accommodation": 18, "food_and_drink": 14, "local_transport": 8, "activities": 10, "miscellaneous": 6 },
+        "budget":     { "accommodation": 40, "food_and_drink": 26, "local_transport": 15, "activities": 22, "miscellaneous": 8 },
+        "midrange":   { "accommodation": 95, "food_and_drink": 50, "local_transport": 30, "activities": 45, "miscellaneous": 12 },
+        "luxury":     { "accommodation": 280, "food_and_drink": 115, "local_transport": 80, "activities": 110, "miscellaneous": 20 }
+      },
+      "flights_usd": { "europe": 800, "north_america": 700, "asia_pacific": 1500 },
+      "notes": [
+        "Carnival (February or March) and New Year in Rio can triple accommodation - book six months out or avoid entirely.",
+        "Pix and cards are used everywhere and 10% service is usually printed on the bill. The country is huge, so budget for internal flights."
+      ]
+    },
+    {
+      "name": "Chile",
+      "continent": "South America",
+      "iso": "CL",
+      "currency": "CLP",
+      "currency_name": "Chilean peso",
+      "usd_to_local": 950,
+      "daily_costs": {
+        "backpacker": { "accommodation": 20, "food_and_drink": 15, "local_transport": 8, "activities": 12, "miscellaneous": 6 },
+        "budget":     { "accommodation": 45, "food_and_drink": 30, "local_transport": 16, "activities": 25, "miscellaneous": 9 },
+        "midrange":   { "accommodation": 105, "food_and_drink": 55, "local_transport": 35, "activities": 50, "miscellaneous": 12 },
+        "luxury":     { "accommodation": 300, "food_and_drink": 120, "local_transport": 90, "activities": 120, "miscellaneous": 22 }
+      },
+      "flights_usd": { "europe": 950, "north_america": 800, "asia_pacific": 1300 },
+      "notes": [
+        "Patagonia and Torres del Paine are November-March only, and refugio beds inside the park need booking months ahead.",
+        "Cards work well in cities; carry cash further south and in the Atacama. Chile is noticeably pricier than its Andean neighbours."
+      ]
+    },
+    {
+      "name": "Peru",
+      "continent": "South America",
+      "iso": "PE",
+      "currency": "PEN",
+      "currency_name": "Peruvian sol",
+      "usd_to_local": 3.75,
+      "daily_costs": {
+        "backpacker": { "accommodation": 12, "food_and_drink": 10, "local_transport": 6, "activities": 12, "miscellaneous": 5 },
+        "budget":     { "accommodation": 30, "food_and_drink": 20, "local_transport": 12, "activities": 25, "miscellaneous": 7 },
+        "midrange":   { "accommodation": 75, "food_and_drink": 40, "local_transport": 25, "activities": 55, "miscellaneous": 10 },
+        "luxury":     { "accommodation": 230, "food_and_drink": 95, "local_transport": 70, "activities": 130, "miscellaneous": 18 }
+      },
+      "flights_usd": { "europe": 850, "north_america": 650, "asia_pacific": 1500 },
+      "notes": [
+        "May-September is the Andean dry season and the trekking window; the coast is best December-March.",
+        "Machu Picchu tickets and the Inca Trail sell out months ahead and are a large one-off cost on top of the daily figures."
+      ]
+    },
+    {
+      "name": "Colombia",
+      "continent": "South America",
+      "iso": "CO",
+      "currency": "COP",
+      "currency_name": "Colombian peso",
+      "usd_to_local": 4100,
+      "daily_costs": {
+        "backpacker": { "accommodation": 12, "food_and_drink": 10, "local_transport": 6, "activities": 10, "miscellaneous": 5 },
+        "budget":     { "accommodation": 30, "food_and_drink": 20, "local_transport": 12, "activities": 20, "miscellaneous": 7 },
+        "midrange":   { "accommodation": 75, "food_and_drink": 40, "local_transport": 25, "activities": 40, "miscellaneous": 10 },
+        "luxury":     { "accommodation": 230, "food_and_drink": 95, "local_transport": 65, "activities": 95, "miscellaneous": 18 }
+      },
+      "flights_usd": { "europe": 750, "north_america": 500, "asia_pacific": 1500 },
+      "notes": [
+        "December-March is driest; Cartagena runs far pricier than Medellin or Bogota and skews any national average.",
+        "Cash is normal outside the big cities, and ATM withdrawal limits are low - expect several trips."
+      ]
+    },
+    {
+      "name": "Uruguay",
+      "continent": "South America",
+      "iso": "UY",
+      "currency": "UYU",
+      "currency_name": "Uruguayan peso",
+      "usd_to_local": 40,
+      "daily_costs": {
+        "backpacker": { "accommodation": 25, "food_and_drink": 18, "local_transport": 8, "activities": 10, "miscellaneous": 6 },
+        "budget":     { "accommodation": 50, "food_and_drink": 32, "local_transport": 15, "activities": 20, "miscellaneous": 9 },
+        "midrange":   { "accommodation": 115, "food_and_drink": 60, "local_transport": 30, "activities": 40, "miscellaneous": 12 },
+        "luxury":     { "accommodation": 320, "food_and_drink": 125, "local_transport": 80, "activities": 100, "miscellaneous": 20 }
+      },
+      "flights_usd": { "europe": 950, "north_america": 850, "asia_pacific": 1700 },
+      "notes": [
+        "Noticeably pricier than Argentina or Brazil. Punta del Este in January is a different price bracket entirely.",
+        "Cards are widely used, and foreign visitors get the VAT refunded automatically on restaurant bills paid by foreign card."
+      ]
+    },
+    {
+      "name": "Ecuador",
+      "continent": "South America",
+      "iso": "EC",
+      "currency": "USD",
+      "currency_name": "US dollar (Ecuador is officially dollarised)",
+      "usd_to_local": 1,
+      "daily_costs": {
+        "backpacker": { "accommodation": 12, "food_and_drink": 10, "local_transport": 6, "activities": 10, "miscellaneous": 5 },
+        "budget":     { "accommodation": 28, "food_and_drink": 20, "local_transport": 12, "activities": 20, "miscellaneous": 7 },
+        "midrange":   { "accommodation": 70, "food_and_drink": 40, "local_transport": 25, "activities": 40, "miscellaneous": 10 },
+        "luxury":     { "accommodation": 220, "food_and_drink": 90, "local_transport": 65, "activities": 95, "miscellaneous": 18 }
+      },
+      "flights_usd": { "europe": 800, "north_america": 550, "asia_pacific": 1600 },
+      "notes": [
+        "The US dollar is the official currency - bring small bills, as change for USD 20 notes is often hard to find.",
+        "The Galapagos are a completely separate budget: park fee, transit card and a flight from the mainland before you spend a cent on the islands."
+      ]
+    },
+    {
+      "name": "Bolivia",
+      "continent": "South America",
+      "iso": "BO",
+      "currency": "BOB",
+      "currency_name": "Bolivian boliviano",
+      "usd_to_local": 6.9,
+      "daily_costs": {
+        "backpacker": { "accommodation": 10, "food_and_drink": 8, "local_transport": 5, "activities": 10, "miscellaneous": 4 },
+        "budget":     { "accommodation": 22, "food_and_drink": 16, "local_transport": 10, "activities": 18, "miscellaneous": 6 },
+        "midrange":   { "accommodation": 60, "food_and_drink": 32, "local_transport": 20, "activities": 35, "miscellaneous": 8 },
+        "luxury":     { "accommodation": 180, "food_and_drink": 75, "local_transport": 55, "activities": 80, "miscellaneous": 15 }
+      },
+      "flights_usd": { "europe": 950, "north_america": 750, "asia_pacific": 1700 },
+      "notes": [
+        "One of the cheapest countries in the Americas. May-October is dry season; the Uyuni salt flats mirror effect needs the wet season (January-March).",
+        "Cash is essential - card acceptance is limited outside La Paz and Santa Cruz, and US dollar cash is a useful backup."
+      ]
+    },
+    {
+      "name": "Paraguay",
+      "continent": "South America",
+      "iso": "PY",
+      "currency": "PYG",
+      "currency_name": "Paraguayan guarani",
+      "usd_to_local": 7500,
+      "daily_costs": {
+        "backpacker": { "accommodation": 12, "food_and_drink": 10, "local_transport": 6, "activities": 8, "miscellaneous": 5 },
+        "budget":     { "accommodation": 28, "food_and_drink": 18, "local_transport": 12, "activities": 15, "miscellaneous": 7 },
+        "midrange":   { "accommodation": 70, "food_and_drink": 35, "local_transport": 25, "activities": 30, "miscellaneous": 10 },
+        "luxury":     { "accommodation": 200, "food_and_drink": 80, "local_transport": 60, "activities": 70, "miscellaneous": 15 }
+      },
+      "flights_usd": { "europe": 1000, "north_america": 850, "asia_pacific": 1800 },
+      "notes": [
+        "Very little tourism infrastructure - expect few hostels and more small mid-range hotels, which lifts the bottom tier slightly.",
+        "May-September is cooler; summer regularly hits 40C. A cash-heavy economy outside Asuncion."
+      ]
+    },
+    {
+      "name": "Venezuela",
+      "continent": "South America",
+      "iso": "VE",
+      "currency": "USD",
+      "currency_name": "US dollar (used in practice; the bolivar is hyperinflated)",
+      "usd_to_local": 1,
+      "daily_costs": {
+        "backpacker": { "accommodation": 15, "food_and_drink": 12, "local_transport": 8, "activities": 10, "miscellaneous": 6 },
+        "budget":     { "accommodation": 35, "food_and_drink": 25, "local_transport": 15, "activities": 20, "miscellaneous": 8 },
+        "midrange":   { "accommodation": 80, "food_and_drink": 45, "local_transport": 30, "activities": 40, "miscellaneous": 12 },
+        "luxury":     { "accommodation": 230, "food_and_drink": 95, "local_transport": 70, "activities": 90, "miscellaneous": 20 }
+      },
+      "flights_usd": { "europe": 1100, "north_america": 700, "asia_pacific": 1900 },
+      "notes": [
+        "Check your government's travel advice before booking - much of the country is currently advised against, and insurance may not cover you.",
+        "The economy runs on US dollar cash in practice; bolivar prices are meaningless within weeks, so these figures are the least certain in the dataset."
+      ]
+    },
+
+    {
+      "name": "Australia",
+      "continent": "Oceania",
+      "iso": "AU",
+      "currency": "AUD",
+      "currency_name": "Australian dollar",
+      "usd_to_local": 1.52,
+      "daily_costs": {
+        "backpacker": { "accommodation": 40, "food_and_drink": 25, "local_transport": 12, "activities": 15, "miscellaneous": 8 },
+        "budget":     { "accommodation": 80, "food_and_drink": 45, "local_transport": 22, "activities": 30, "miscellaneous": 12 },
+        "midrange":   { "accommodation": 170, "food_and_drink": 85, "local_transport": 45, "activities": 55, "miscellaneous": 16 },
+        "luxury":     { "accommodation": 430, "food_and_drink": 190, "local_transport": 110, "activities": 140, "miscellaneous": 28 }
+      },
+      "flights_usd": { "europe": 1200, "north_america": 1200, "asia_pacific": 500 },
+      "notes": [
+        "Distances are enormous - domestic flights or a campervan are usually unavoidable and sit outside the local transport line for short trips.",
+        "December-January is the domestic holiday peak. No tipping expected, and cards are accepted everywhere including on buses."
+      ]
+    },
+    {
+      "name": "New Zealand",
+      "continent": "Oceania",
+      "iso": "NZ",
+      "currency": "NZD",
+      "currency_name": "New Zealand dollar",
+      "usd_to_local": 1.65,
+      "daily_costs": {
+        "backpacker": { "accommodation": 40, "food_and_drink": 25, "local_transport": 15, "activities": 15, "miscellaneous": 8 },
+        "budget":     { "accommodation": 75, "food_and_drink": 42, "local_transport": 28, "activities": 30, "miscellaneous": 12 },
+        "midrange":   { "accommodation": 160, "food_and_drink": 80, "local_transport": 55, "activities": 55, "miscellaneous": 16 },
+        "luxury":     { "accommodation": 400, "food_and_drink": 175, "local_transport": 120, "activities": 140, "miscellaneous": 28 }
+      },
+      "flights_usd": { "europe": 1350, "north_america": 1200, "asia_pacific": 550 },
+      "notes": [
+        "Campervan or car hire dominates the transport line - public transport between towns is thin.",
+        "December-February is peak and books out well ahead. No tipping culture, and adventure activities (bungy, glacier heli) are the real budget risk."
+      ]
+    },
+    {
+      "name": "Fiji",
+      "continent": "Oceania",
+      "iso": "FJ",
+      "currency": "FJD",
+      "currency_name": "Fijian dollar",
+      "usd_to_local": 2.25,
+      "daily_costs": {
+        "backpacker": { "accommodation": 30, "food_and_drink": 22, "local_transport": 12, "activities": 18, "miscellaneous": 8 },
+        "budget":     { "accommodation": 65, "food_and_drink": 40, "local_transport": 22, "activities": 35, "miscellaneous": 10 },
+        "midrange":   { "accommodation": 150, "food_and_drink": 75, "local_transport": 50, "activities": 70, "miscellaneous": 15 },
+        "luxury":     { "accommodation": 450, "food_and_drink": 170, "local_transport": 130, "activities": 160, "miscellaneous": 25 }
+      },
+      "flights_usd": { "europe": 1500, "north_america": 1000, "asia_pacific": 600 },
+      "notes": [
+        "May-October is the dry season and the peak; November-April is cyclone season.",
+        "Island transfers by boat or light plane are a genuine cost line, and resorts commonly add a service charge plus government levies of around 15% in total."
+      ]
+    },
+    {
+      "name": "French Polynesia",
+      "continent": "Oceania",
+      "iso": "PF",
+      "currency": "XPF",
+      "currency_name": "CFP franc",
+      "usd_to_local": 110,
+      "daily_costs": {
+        "backpacker": { "accommodation": 60, "food_and_drink": 35, "local_transport": 15, "activities": 25, "miscellaneous": 12 },
+        "budget":     { "accommodation": 130, "food_and_drink": 65, "local_transport": 30, "activities": 50, "miscellaneous": 15 },
+        "midrange":   { "accommodation": 300, "food_and_drink": 130, "local_transport": 70, "activities": 100, "miscellaneous": 22 },
+        "luxury":     { "accommodation": 900, "food_and_drink": 300, "local_transport": 200, "activities": 220, "miscellaneous": 40 }
+      },
+      "flights_usd": { "europe": 1700, "north_america": 1100, "asia_pacific": 900 },
+      "notes": [
+        "One of the most expensive destinations anywhere. Pensions de famille (family guesthouses) are the only real budget option - there is almost no hostel scene.",
+        "May-October is the dry season. Nearly everything is imported, so supermarket prices are roughly double mainland France."
+      ]
+    },
+    {
+      "name": "Papua New Guinea",
+      "continent": "Oceania",
+      "iso": "PG",
+      "currency": "PGK",
+      "currency_name": "Papua New Guinean kina",
+      "usd_to_local": 4,
+      "daily_costs": {
+        "backpacker": { "accommodation": 35, "food_and_drink": 22, "local_transport": 15, "activities": 20, "miscellaneous": 10 },
+        "budget":     { "accommodation": 75, "food_and_drink": 40, "local_transport": 30, "activities": 40, "miscellaneous": 14 },
+        "midrange":   { "accommodation": 170, "food_and_drink": 80, "local_transport": 70, "activities": 80, "miscellaneous": 20 },
+        "luxury":     { "accommodation": 400, "food_and_drink": 160, "local_transport": 180, "activities": 180, "miscellaneous": 30 }
+      },
+      "flights_usd": { "europe": 1800, "north_america": 1500, "asia_pacific": 700 },
+      "notes": [
+        "Hard and expensive to travel independently - domestic flights and local guides carry the budget, and security advice matters in Port Moresby and Lae.",
+        "May-October is drier. Cash outside the capital, and card acceptance is limited even in it."
+      ]
+    },
+    {
+      "name": "New Caledonia",
+      "continent": "Oceania",
+      "iso": "NC",
+      "currency": "XPF",
+      "currency_name": "CFP franc",
+      "usd_to_local": 110,
+      "daily_costs": {
+        "backpacker": { "accommodation": 45, "food_and_drink": 30, "local_transport": 15, "activities": 20, "miscellaneous": 10 },
+        "budget":     { "accommodation": 95, "food_and_drink": 55, "local_transport": 30, "activities": 40, "miscellaneous": 14 },
+        "midrange":   { "accommodation": 200, "food_and_drink": 100, "local_transport": 65, "activities": 80, "miscellaneous": 18 },
+        "luxury":     { "accommodation": 500, "food_and_drink": 210, "local_transport": 160, "activities": 180, "miscellaneous": 30 }
+      },
+      "flights_usd": { "europe": 1600, "north_america": 1500, "asia_pacific": 600 },
+      "notes": [
+        "French prices in the Pacific - imported supermarket food is expensive, and Noumea restaurants are priced like Paris.",
+        "September-November is the pleasant shoulder. A hire car is near-essential on Grande Terre, which pushes the transport line up."
+      ]
+    },
+    {
+      "name": "Vanuatu",
+      "continent": "Oceania",
+      "iso": "VU",
+      "currency": "VUV",
+      "currency_name": "Vanuatu vatu",
+      "usd_to_local": 120,
+      "daily_costs": {
+        "backpacker": { "accommodation": 30, "food_and_drink": 22, "local_transport": 12, "activities": 20, "miscellaneous": 8 },
+        "budget":     { "accommodation": 65, "food_and_drink": 40, "local_transport": 25, "activities": 40, "miscellaneous": 12 },
+        "midrange":   { "accommodation": 150, "food_and_drink": 75, "local_transport": 55, "activities": 80, "miscellaneous": 16 },
+        "luxury":     { "accommodation": 400, "food_and_drink": 160, "local_transport": 140, "activities": 170, "miscellaneous": 25 }
+      },
+      "flights_usd": { "europe": 1700, "north_america": 1400, "asia_pacific": 650 },
+      "notes": [
+        "April-October is the dry season; cyclone season runs November-April.",
+        "The Tanna and Ambrym volcano trips are a significant one-off cost, and inter-island flights are frequently rescheduled - build in slack days."
+      ]
+    },
+    {
+      "name": "Samoa",
+      "continent": "Oceania",
+      "iso": "WS",
+      "currency": "WST",
+      "currency_name": "Samoan tala",
+      "usd_to_local": 2.75,
+      "daily_costs": {
+        "backpacker": { "accommodation": 25, "food_and_drink": 20, "local_transport": 12, "activities": 15, "miscellaneous": 8 },
+        "budget":     { "accommodation": 55, "food_and_drink": 35, "local_transport": 22, "activities": 30, "miscellaneous": 10 },
+        "midrange":   { "accommodation": 120, "food_and_drink": 65, "local_transport": 45, "activities": 60, "miscellaneous": 15 },
+        "luxury":     { "accommodation": 320, "food_and_drink": 135, "local_transport": 110, "activities": 130, "miscellaneous": 22 }
+      },
+      "flights_usd": { "europe": 1700, "north_america": 1100, "asia_pacific": 700 },
+      "notes": [
+        "Beach fales (simple open-sided huts) are the budget classic and usually include breakfast and dinner, which pulls the food line down.",
+        "May-October is dry season. Sundays are strictly observed and almost everything closes - plan around it."
+      ]
+    },
+    {
+      "name": "Cook Islands",
+      "continent": "Oceania",
+      "iso": "CK",
+      "currency": "NZD",
+      "currency_name": "New Zealand dollar",
+      "usd_to_local": 1.65,
+      "daily_costs": {
+        "backpacker": { "accommodation": 45, "food_and_drink": 30, "local_transport": 12, "activities": 20, "miscellaneous": 10 },
+        "budget":     { "accommodation": 90, "food_and_drink": 50, "local_transport": 22, "activities": 40, "miscellaneous": 13 },
+        "midrange":   { "accommodation": 190, "food_and_drink": 95, "local_transport": 45, "activities": 75, "miscellaneous": 18 },
+        "luxury":     { "accommodation": 480, "food_and_drink": 190, "local_transport": 110, "activities": 160, "miscellaneous": 28 }
+      },
+      "flights_usd": { "europe": 1800, "north_america": 1200, "asia_pacific": 700 },
+      "notes": [
+        "New Zealand dollars are the currency (with local coins). May-October is the dry season.",
+        "Rarotonga has one ring road and two bus routes, clockwise and anti-clockwise, so local transport stays cheap; Aitutaki day trips are the big spend."
+      ]
+    },
+    {
+      "name": "Tonga",
+      "continent": "Oceania",
+      "iso": "TO",
+      "currency": "TOP",
+      "currency_name": "Tongan pa'anga",
+      "usd_to_local": 2.4,
+      "daily_costs": {
+        "backpacker": { "accommodation": 28, "food_and_drink": 20, "local_transport": 12, "activities": 18, "miscellaneous": 8 },
+        "budget":     { "accommodation": 60, "food_and_drink": 38, "local_transport": 22, "activities": 35, "miscellaneous": 10 },
+        "midrange":   { "accommodation": 130, "food_and_drink": 70, "local_transport": 45, "activities": 70, "miscellaneous": 15 },
+        "luxury":     { "accommodation": 330, "food_and_drink": 140, "local_transport": 110, "activities": 150, "miscellaneous": 22 }
+      },
+      "flights_usd": { "europe": 1800, "north_america": 1300, "asia_pacific": 750 },
+      "notes": [
+        "Humpback whale swimming (July-October) is the main draw and the main cost - a licensed day trip is a few hundred dollars.",
+        "Sundays are constitutionally protected: almost nothing opens. A cash-heavy economy with limited ATMs outside Nuku'alofa."
+      ]
+    }
+  ]
+}

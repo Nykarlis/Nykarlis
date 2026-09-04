@@ -1,0 +1,8 @@
+[
+  { "id": "relaxation", "name": "Relaxation & beaches", "emoji": "🌴" },
+  { "id": "adventure", "name": "Adventure & outdoors", "emoji": "🥾" },
+  { "id": "culture", "name": "Culture & history", "emoji": "🏛️" },
+  { "id": "food-nightlife", "name": "Food & nightlife", "emoji": "🍹" },
+  { "id": "romance", "name": "Romance / honeymoon", "emoji": "💞" },
+  { "id": "family", "name": "Family fun", "emoji": "👨‍👩‍👧" }
+]

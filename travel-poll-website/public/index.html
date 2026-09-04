@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Caribbean Travel Survey</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <h1>🏝️ Caribbean travel survey</h1>
+    <p>Three quick questions. One submission per visitor — then you'll see how everyone else answered.</p>
+  </header>
+
+  <main>
+    <section id="survey" hidden>
+      <ol class="progress" id="progress">
+        <li data-step="1">Destination</li>
+        <li data-step="2">Reason</li>
+        <li data-step="3">Activities</li>
+      </ol>
+
+      <section class="step" id="step-1">
+        <h2><span class="step-number">1</span> Which Caribbean destination excites you most?</h2>
+        <p class="hint">Pick one.</p>
+        <div class="grid" id="destination-options"></div>
+      </section>
+
+      <section class="step" id="step-2">
+        <h2><span class="step-number">2</span> What's your main reason for traveling?</h2>
+        <p class="hint">Pick one.</p>
+        <div class="chips" id="reason-options"></div>
+      </section>
+
+      <section class="step" id="step-3">
+        <h2><span class="step-number">3</span> What activities do you want to do there?</h2>
+        <p class="hint" id="activity-hint">Pick 1–3.</p>
+        <div class="chips" id="activity-options"></div>
+      </section>
+
+      <div class="submit-bar">
+        <button id="submit-button" disabled>Submit vote</button>
+        <span class="hint" id="submit-hint">Answer all three questions to submit.</span>
+      </div>
+    </section>
+
+    <section id="results" hidden aria-live="polite">
+      <div class="results-header">
+        <h2>Live results</h2>
+        <span id="total-votes"></span>
+      </div>
+
+      <h3>Destinations</h3>
+      <div class="results-list" id="destination-results"></div>
+
+      <h3>Reasons for traveling</h3>
+      <div class="results-list" id="reason-results"></div>
+
+      <h3>Activities <span class="note">— percentages are the share of respondents who picked each one</span></h3>
+      <div class="results-list" id="activity-results"></div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" hidden></div>
+
+  <footer>
+    <p>Built with Node/Express + vanilla JS. Results refresh every 5 seconds.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

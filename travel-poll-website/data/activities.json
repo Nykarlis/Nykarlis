@@ -1,9 +1,0 @@
-[
-  { "id": "snorkeling", "name": "Snorkeling & diving", "emoji": "🤿" },
-  { "id": "beach", "name": "Beach lounging", "emoji": "🏖️" },
-  { "id": "hiking", "name": "Hiking & nature", "emoji": "🌿" },
-  { "id": "history", "name": "Historic sites & museums", "emoji": "🏰" },
-  { "id": "nightlife", "name": "Nightlife & live music", "emoji": "🎶" },
-  { "id": "food-tours", "name": "Local food tours", "emoji": "🍤" },
-  { "id": "sailing", "name": "Sailing & boat trips", "emoji": "⛵" }
-]

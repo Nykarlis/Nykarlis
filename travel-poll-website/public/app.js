@@ -1,105 +1,205 @@
-const POLL_KEY = "travel-poll:voted";
+const VOTED_KEY = "caribbean-survey:voted";
 const POLL_INTERVAL_MS = 5000;
 
-const grid = document.getElementById("poll");
-const resultsList = document.getElementById("results-list");
+const surveySection = document.getElementById("survey");
+const resultsSection = document.getElementById("results");
+const destinationOptions = document.getElementById("destination-options");
+const reasonOptions = document.getElementById("reason-options");
+const activityOptions = document.getElementById("activity-options");
+const activityHint = document.getElementById("activity-hint");
+const submitButton = document.getElementById("submit-button");
+const submitHint = document.getElementById("submit-hint");
+const progress = document.getElementById("progress");
 const totalVotesEl = document.getElementById("total-votes");
 const toast = document.getElementById("toast");
 
-function getVotedIds() {
-  try {
-    return new Set(JSON.parse(localStorage.getItem(POLL_KEY) || "[]"));
-  } catch {
-    return new Set();
-  }
-}
+let options = { destinations: [], reasons: [], activities: [], maxActivities: 3 };
+let chosenDestination = null;
+let chosenReason = null;
+let chosenActivities = [];
+let resultsTimer = null;
 
-function rememberVote(id) {
-  const voted = getVotedIds();
-  voted.add(id);
-  localStorage.setItem(POLL_KEY, JSON.stringify([...voted]));
+function hasAlreadyVoted() {
+  return localStorage.getItem(VOTED_KEY) === "true";
 }
 
 function showToast(message, isError = false) {
   toast.textContent = message;
   toast.classList.toggle("error", isError);
   toast.hidden = false;
-  clearTimeout(showToast._t);
-  showToast._t = setTimeout(() => {
+  clearTimeout(showToast.timer);
+  showToast.timer = setTimeout(() => {
     toast.hidden = true;
-  }, 2500);
+  }, 3000);
 }
 
-function renderCards(destinations) {
-  const votedIds = getVotedIds();
-
-  // Cards keep the seed order so the grid doesn't jump around as votes come in.
-  const byId = new Map(destinations.map((d) => [d.id, d]));
-  const orderedIds = grid.dataset.order
-    ? grid.dataset.order.split(",")
-    : destinations.map((d) => d.id);
-  if (!grid.dataset.order) grid.dataset.order = orderedIds.join(",");
-
-  grid.innerHTML = "";
-  orderedIds.forEach((id) => {
-    const d = byId.get(id);
-    if (!d) return;
-    const hasVoted = votedIds.has(d.id);
-
-    const card = document.createElement("article");
-    card.className = "card" + (hasVoted ? " voted" : "");
+function renderDestinations() {
+  destinationOptions.innerHTML = "";
+  options.destinations.forEach((destination) => {
+    const card = document.createElement("button");
+    card.type = "button";
+    card.className = "card" + (chosenDestination === destination.id ? " selected" : "");
     card.innerHTML = `
-      <div class="emoji">${d.emoji}</div>
-      <h3>${d.name}</h3>
-      <p>${d.blurb}</p>
-      <button ${hasVoted ? "disabled" : ""}>${hasVoted ? "Voted ✓" : "Vote"}</button>
+      <span class="emoji">${destination.emoji}</span>
+      <span class="card-name">${destination.name}</span>
+      <span class="card-blurb">${destination.blurb}</span>
     `;
-    card.querySelector("button").addEventListener("click", () => vote(d.id));
-    grid.appendChild(card);
+    card.addEventListener("click", () => {
+      chosenDestination = destination.id;
+      renderDestinations();
+      updateProgress();
+    });
+    destinationOptions.appendChild(card);
   });
 }
 
-function renderResults(destinations, total) {
-  totalVotesEl.textContent = total ? `(${total} vote${total === 1 ? "" : "s"})` : "";
-  resultsList.innerHTML = "";
-  destinations.forEach((d) => {
-    const row = document.createElement("div");
-    row.className = "result-row";
-    row.innerHTML = `
+function renderReasons() {
+  reasonOptions.innerHTML = "";
+  options.reasons.forEach((reason) => {
+    const chip = document.createElement("button");
+    chip.type = "button";
+    chip.className = "chip" + (chosenReason === reason.id ? " selected" : "");
+    chip.innerHTML = `<span class="emoji">${reason.emoji}</span> ${reason.name}`;
+    chip.addEventListener("click", () => {
+      chosenReason = reason.id;
+      renderReasons();
+      updateProgress();
+    });
+    reasonOptions.appendChild(chip);
+  });
+}
+
+function renderActivities() {
+  const maxReached = chosenActivities.length >= options.maxActivities;
+
+  activityOptions.innerHTML = "";
+  options.activities.forEach((activity) => {
+    const isChosen = chosenActivities.includes(activity.id);
+    const chip = document.createElement("button");
+    chip.type = "button";
+    chip.className = "chip" + (isChosen ? " selected" : "");
+    chip.disabled = maxReached && !isChosen;
+    chip.innerHTML = `<span class="emoji">${activity.emoji}</span> ${activity.name}`;
+    chip.addEventListener("click", () => {
+      if (isChosen) {
+        chosenActivities = chosenActivities.filter((id) => id !== activity.id);
+      } else {
+        chosenActivities.push(activity.id);
+      }
+      renderActivities();
+      updateProgress();
+    });
+    activityOptions.appendChild(chip);
+  });
+
+  activityHint.textContent = maxReached
+    ? `That's ${options.maxActivities} — unpick one to swap your choices.`
+    : `Pick 1–${options.maxActivities}. (${chosenActivities.length} selected)`;
+}
+
+function updateProgress() {
+  const done = {
+    1: chosenDestination !== null,
+    2: chosenReason !== null,
+    3: chosenActivities.length > 0,
+  };
+  progress.querySelectorAll("li").forEach((item) => {
+    item.classList.toggle("done", done[item.dataset.step]);
+  });
+
+  const allAnswered = done[1] && done[2] && done[3];
+  submitButton.disabled = !allAnswered;
+  submitHint.textContent = allAnswered ? "Ready to send." : "Answer all three questions to submit.";
+}
+
+function renderResultRows(container, rows) {
+  container.innerHTML = "";
+  rows.forEach((row) => {
+    const el = document.createElement("div");
+    el.className = "result-row";
+    el.innerHTML = `
       <div class="label">
-        <span>${d.emoji} ${d.name}</span>
-        <span>${d.votes} · ${d.percent}%</span>
+        <span>${row.emoji} ${row.name}</span>
+        <span>${row.votes} · ${row.percent}%</span>
       </div>
-      <div class="bar-track"><div class="bar-fill" style="width:${d.percent}%"></div></div>
+      <div class="bar-track"><div class="bar-fill" style="width:${row.percent}%"></div></div>
     `;
-    resultsList.appendChild(row);
+    container.appendChild(el);
   });
 }
 
-async function loadPoll() {
-  const res = await fetch("/api/destinations");
-  const data = await res.json();
-  renderCards(data.destinations);
-  renderResults(data.destinations, data.total);
+function renderResults(data) {
+  totalVotesEl.textContent =
+    data.total === 0
+      ? "No submissions yet — be the first."
+      : `${data.total} submission${data.total === 1 ? "" : "s"}`;
+  renderResultRows(document.getElementById("destination-results"), data.destinations);
+  renderResultRows(document.getElementById("reason-results"), data.reasons);
+  renderResultRows(document.getElementById("activity-results"), data.activities);
 }
 
-async function vote(id) {
-  if (getVotedIds().has(id)) return;
+async function loadResults() {
   try {
-    const res = await fetch(`/api/vote/${id}`, { method: "POST" });
-    const data = await res.json();
-    if (!res.ok) {
-      showToast(data.error || "Something went wrong", true);
-      return;
-    }
-    rememberVote(id);
-    renderCards(data.destinations);
-    renderResults(data.destinations, data.total);
-    showToast("Thanks for voting!");
+    const res = await fetch("/api/results");
+    renderResults(await res.json());
   } catch (err) {
-    showToast("Network error — try again", true);
+    // A failed refresh just leaves the last numbers on screen.
   }
 }
 
-loadPoll();
-setInterval(loadPoll, POLL_INTERVAL_MS);
+function showResultsView() {
+  surveySection.hidden = true;
+  resultsSection.hidden = false;
+  if (resultsTimer === null) {
+    resultsTimer = setInterval(loadResults, POLL_INTERVAL_MS);
+  }
+}
+
+async function submitVote() {
+  submitButton.disabled = true;
+  try {
+    const res = await fetch("/api/vote", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        destination: chosenDestination,
+        reason: chosenReason,
+        activities: chosenActivities,
+      }),
+    });
+    const data = await res.json();
+
+    if (!res.ok) {
+      showToast(data.error || "Something went wrong", true);
+      submitButton.disabled = false;
+      return;
+    }
+
+    localStorage.setItem(VOTED_KEY, "true");
+    renderResults(data);
+    showResultsView();
+    showToast("Thanks — your answers are in!");
+  } catch (err) {
+    showToast("Network error — try again", true);
+    submitButton.disabled = false;
+  }
+}
+
+async function start() {
+  if (hasAlreadyVoted()) {
+    await loadResults();
+    showResultsView();
+    return;
+  }
+
+  const res = await fetch("/api/options");
+  options = await res.json();
+  renderDestinations();
+  renderReasons();
+  renderActivities();
+  updateProgress();
+  surveySection.hidden = false;
+}
+
+submitButton.addEventListener("click", submitVote);
+start();

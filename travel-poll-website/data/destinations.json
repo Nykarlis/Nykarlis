@@ -1,72 +1,50 @@
 [
   {
-    "id": "japan",
-    "name": "Japan",
-    "emoji": "🗾",
-    "blurb": "Neon cities, ancient temples, and cherry blossoms.",
-    "votes": 0
+    "id": "jamaica",
+    "name": "Jamaica",
+    "emoji": "🇯🇲",
+    "blurb": "Climb the limestone terraces of Dunn's River Falls, then eat jerk chicken smoked over pimento wood in Boston Bay."
   },
   {
-    "id": "italy",
-    "name": "Italy — Amalfi Coast",
-    "emoji": "🍋",
-    "blurb": "Cliffside villages, pasta, and turquoise water.",
-    "votes": 0
+    "id": "dominican-republic",
+    "name": "Dominican Republic",
+    "emoji": "🇩🇴",
+    "blurb": "Santo Domingo's Zona Colonial is the oldest European-built city in the Americas, and Pico Duarte is the Caribbean's highest peak."
   },
   {
-    "id": "new-zealand",
-    "name": "New Zealand",
-    "emoji": "🥝",
-    "blurb": "Fjords, glaciers, and Middle-earth landscapes.",
-    "votes": 0
+    "id": "bahamas",
+    "name": "Bahamas",
+    "emoji": "🇧🇸",
+    "blurb": "Swim with the wild pigs of Big Major Cay in the Exumas and dive Andros, home to the world's densest cluster of blue holes."
   },
   {
-    "id": "iceland",
-    "name": "Iceland",
-    "emoji": "🌋",
-    "blurb": "Northern lights, glaciers, and geothermal spas.",
-    "votes": 0
+    "id": "puerto-rico",
+    "name": "Puerto Rico",
+    "emoji": "🇵🇷",
+    "blurb": "Walk the 500-year-old walls of El Morro in Old San Juan, then hike El Yunque, the only tropical rainforest in the US Forest Service."
   },
   {
-    "id": "bali",
-    "name": "Bali",
-    "emoji": "🌴",
-    "blurb": "Rice terraces, temples, and surf beaches.",
-    "votes": 0
+    "id": "barbados",
+    "name": "Barbados",
+    "emoji": "🇧🇧",
+    "blurb": "Home of rum since the 1600s, with Harrison's Cave running under the island and flying fish and cou-cou on every menu."
   },
   {
-    "id": "peru",
-    "name": "Peru — Machu Picchu",
-    "emoji": "🏔️",
-    "blurb": "Andes peaks and lost Incan cities.",
-    "votes": 0
-  },
-  {
-    "id": "morocco",
-    "name": "Morocco",
-    "emoji": "🕌",
-    "blurb": "Desert dunes, souks, and blue-washed towns.",
-    "votes": 0
-  },
-  {
-    "id": "thailand",
-    "name": "Thailand",
+    "id": "turks-and-caicos",
+    "name": "Turks and Caicos",
     "emoji": "🏝️",
-    "blurb": "Island hopping, street food, and jungle temples.",
-    "votes": 0
+    "blurb": "Grace Bay Beach fronts a barrier reef system that is among the largest on earth, with a wall that drops off just offshore."
   },
   {
-    "id": "norway",
-    "name": "Norway — Fjords",
-    "emoji": "⛰️",
-    "blurb": "Dramatic fjords and the midnight sun.",
-    "votes": 0
+    "id": "st-lucia",
+    "name": "St. Lucia",
+    "emoji": "🌋",
+    "blurb": "The twin volcanic Pitons rise straight out of the sea near Soufrière, next to a sulphur springs field you can drive right into."
   },
   {
-    "id": "costa-rica",
-    "name": "Costa Rica",
-    "emoji": "🌺",
-    "blurb": "Rainforests, volcanoes, and pura vida.",
-    "votes": 0
+    "id": "aruba",
+    "name": "Aruba",
+    "emoji": "🌵",
+    "blurb": "A dry, cactus-covered island outside the hurricane belt, where steady trade winds bend the divi-divi trees and make Arikok's coast wild."
   }
 ]
